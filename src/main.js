@@ -1,12 +1,14 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import './assets/main.css'
-
-const app = createApp(App)
-
 
 import App from './App.vue'
 
+import './assets/main.css';
+import router from './router'
+import AppLink from './components/AppLink.vue';
 
+const app = createApp(App)
 
-createApp(App).mount('#app')
+app.use(router).component('AppLink',AppLink)
+
+app.mount('#app')

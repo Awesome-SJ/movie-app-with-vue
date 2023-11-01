@@ -4,5 +4,4 @@ export const useMovieStore = defineStore('movie', () => {
     state: () => ({
         movie: null,
     })
-
     )
